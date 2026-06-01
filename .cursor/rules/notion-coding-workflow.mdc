@@ -1,0 +1,69 @@
+---
+description: Coding workflow driven by Notion tasks — read, confirm, plan, implement, review, update
+alwaysApply: true
+---
+
+# Notion Coding Workflow
+
+When a user requests a task or starts a coding session, always follow these steps in order:
+
+## Step 1 — Read tasks from Notion
+
+Use the Notion MCP to retrieve the list of tasks with status **"Todo"**:
+
+- Query the database and filter for `Status = Todo`
+- Display the list to the user so they can choose which task to work on
+- Retrieve the `title` and `description` (if available) of the selected task
+
+## Step 2 — Confirm requirements
+
+Before doing anything, clarify:
+
+- What is the specific goal of the task?
+- Are there any edge cases or constraints to watch out for?
+- Definition of Done: when is the task considered complete?
+
+**Do not start coding until you have confirmation from the user.**
+
+## Step 3 — Make a plan
+
+After confirmation, present a checklist-style plan before coding:
+
+```
+[ ] Step 1 — ...
+[ ] Step 2 — ...
+[ ] Step 3 — ...
+```
+
+Wait for the user to approve the plan. If the user has feedback, revise the plan before proceeding.
+
+## Step 4 — Implement
+
+Execute according to the approved plan:
+
+- Check off each step as you complete it
+- If you encounter a blocker or discover additional scope → pause and notify the user before continuing
+
+## Step 5 — Self-review
+
+After implementation, review your work:
+
+- Does the code follow project conventions? (see CLAUDE.md)
+- Are there any linter errors?
+- Does it meet the Definition of Done agreed upon in Step 2?
+
+Give the user a brief summary of your review findings.
+
+## Step 6 — Update Notion
+
+When the user confirms the task is done, use the Notion MCP to update the task status:
+
+- `Status`: **"Todo"** → **"Done"**
+
+---
+
+## Notes
+
+- Always pause and ask the user if the scope changes mid-way
+- If the user starts a conversation without specifying a task, ask: _"Do you want to fetch a task from Notion?"_
+- The Notion MCP is already set up — use the `notionApi` tool to query/update

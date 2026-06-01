@@ -66,4 +66,5 @@ app/
 
 @AGENTS.md
 @.claude/rules/anilist.md
-@.claude/rules/nextjs.md
+
+Next.js code style rules live in `.claude/rules/nextjs/` (one topic per file — see `overview.md`).
