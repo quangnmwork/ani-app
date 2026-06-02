@@ -11,17 +11,17 @@ Enabled via `cacheComponents: true` in `next.config.ts`.
 
 ## Choose the right tool
 
-| Pattern | When |
-|---------|------|
+| Pattern                                   | When                                                         |
+| ----------------------------------------- | ------------------------------------------------------------ |
 | `fetch(url, { next: { revalidate: N } })` | External APIs (AniList) — default in `lib/anilist/client.ts` |
-| `'use cache'` + `cacheLife('hours')` | Stable server functions with serializable I/O |
-| `cacheTag` / `revalidateTag` | Invalidate after mutations (OAuth, list updates) |
-| `connection()` | Fully dynamic — no static shell |
+| `'use cache'` + `cacheLife('hours')`      | Stable server functions with serializable I/O                |
+| `cacheTag` / `revalidateTag`              | Invalidate after mutations (OAuth, list updates)             |
+| `connection()`                            | Fully dynamic — no static shell                              |
 
 ```tsx
 export async function getTrending() {
-  'use cache';
-  cacheLife('hours');
+  "use cache";
+  cacheLife("hours");
   return anilist<PageMedia>(TRENDING_QUERY, { page: 1, perPage: 12 });
 }
 ```
@@ -31,7 +31,7 @@ export async function getTrending() {
 Read **outside** cached function, pass values as arguments:
 
 ```tsx
-const userId = (await cookies()).get('userId')?.value;
+const userId = (await cookies()).get("userId")?.value;
 return <CachedProfile userId={userId} />;
 ```
 

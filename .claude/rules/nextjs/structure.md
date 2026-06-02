@@ -21,12 +21,12 @@ app/
 
 ## Naming
 
-| Item | Convention |
-|------|------------|
-| Components | `PascalCase` — `AnimeCard` |
-| Files | `kebab-case.tsx` — `anime-card.tsx` |
-| Hooks | `use-kebab-case.ts` (client files only) |
-| Routes | `kebab-case` folders — `app/anime/[id]/` |
+| Item       | Convention                               |
+| ---------- | ---------------------------------------- |
+| Components | `PascalCase` — `AnimeCard`               |
+| Files      | `kebab-case.tsx` — `anime-card.tsx`      |
+| Hooks      | `use-kebab-case.ts` (client files only)  |
+| Routes     | `kebab-case` folders — `app/anime/[id]/` |
 
 ## Exports
 

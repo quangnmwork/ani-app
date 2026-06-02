@@ -16,28 +16,28 @@ paths:
 
 ## Rules index (same folder)
 
-| File | Topic |
-|------|--------|
-| `rendering.md` | Server vs Client Components |
-| `async-apis.md` | `params`, `searchParams`, `cookies`, `headers` |
-| `streaming.md` | Suspense, blocking routes |
-| `caching.md` | `use cache`, `fetch` revalidate |
-| `data-fetching.md` | Server-side data patterns |
-| `structure.md` | Folders, naming, exports |
-| `typescript-react.md` | Types, React 19 |
-| `navigation.md` | Link, redirect, metadata |
-| `images.md` | `next/image` vs CDN |
-| `styling.md` | Tailwind v4, dark theme |
-| `api-routes.md` | Route Handlers, OAuth |
-| `anti-patterns.md` | Don'ts + verify commands |
+| File                  | Topic                                          |
+| --------------------- | ---------------------------------------------- |
+| `rendering.md`        | Server vs Client Components                    |
+| `async-apis.md`       | `params`, `searchParams`, `cookies`, `headers` |
+| `streaming.md`        | Suspense, blocking routes                      |
+| `caching.md`          | `use cache`, `fetch` revalidate                |
+| `data-fetching.md`    | Server-side data patterns                      |
+| `structure.md`        | Folders, naming, exports                       |
+| `typescript-react.md` | Types, React 19                                |
+| `navigation.md`       | Link, redirect, metadata                       |
+| `images.md`           | `next/image` vs CDN                            |
+| `styling.md`          | Tailwind v4, dark theme                        |
+| `api-routes.md`       | Route Handlers, OAuth                          |
+| `anti-patterns.md`    | Don'ts + verify commands                       |
 
 ## Project layout
 
-| What | Where |
-|------|-------|
-| Route page | `app/{route}/page.tsx` |
-| Shared UI | `app/components/{category}/` |
-| Data layer | `app/lib/anilist/` |
-| API routes | `app/api/` |
+| What       | Where                        |
+| ---------- | ---------------------------- |
+| Route page | `app/{route}/page.tsx`       |
+| Shared UI  | `app/components/{category}/` |
+| Data layer | `app/lib/anilist/`           |
+| API routes | `app/api/`                   |
 
 Path alias: `@/` → project root.

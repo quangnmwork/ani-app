@@ -124,10 +124,7 @@ Extract business logic and transformations out of components as pure functions.
 
 ```tsx
 // utils.ts
-export const calcTrend = (
-  current: number,
-  previous: number,
-): "up" | "down" | "flat" => {
+export const calcTrend = (current: number, previous: number): "up" | "down" | "flat" => {
   if (current > previous) return "up";
   if (current < previous) return "down";
   return "flat";
@@ -284,9 +281,7 @@ const Lottery = () => {
 
 // OK — side effect in event handler
 const LoginButton = () => (
-  <button onClick={() => fetch("/api/login", { method: "POST" })}>
-    Log in
-  </button>
+  <button onClick={() => fetch("/api/login", { method: "POST" })}>Log in</button>
 );
 ```
 

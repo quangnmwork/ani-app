@@ -42,9 +42,9 @@ async function TrendingSection() {
 
 ## `loading.tsx` vs `<Suspense>`
 
-| | `loading.tsx` | `<Suspense>` |
-|---|---------------|--------------|
-| Scope | Whole route segment | Per section |
-| Use | Simple all-or-nothing routes | Homepage with mixed static + dynamic |
+|       | `loading.tsx`                | `<Suspense>`                         |
+| ----- | ---------------------------- | ------------------------------------ |
+| Scope | Whole route segment          | Per section                          |
+| Use   | Simple all-or-nothing routes | Homepage with mixed static + dynamic |
 
 Prefer explicit `<Suspense>` for this project.

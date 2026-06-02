@@ -9,16 +9,16 @@ paths:
 
 ```tsx
 // app/api/auth/callback/route.ts
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const code = searchParams.get('code');
+  const code = searchParams.get("code");
   if (!code) {
-    return NextResponse.json({ error: 'Missing code' }, { status: 400 });
+    return NextResponse.json({ error: "Missing code" }, { status: 400 });
   }
   // exchange token server-side
-  return NextResponse.redirect(new URL('/', request.url));
+  return NextResponse.redirect(new URL("/", request.url));
 }
 ```
 

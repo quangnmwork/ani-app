@@ -8,13 +8,13 @@ paths:
 
 Synchronous access is **removed**. Always `await`:
 
-| API | Pattern |
-|-----|---------|
-| `params` | `const { id } = await params` |
+| API            | Pattern                            |
+| -------------- | ---------------------------------- |
+| `params`       | `const { id } = await params`      |
 | `searchParams` | `const { q } = await searchParams` |
-| `cookies()` | `const jar = await cookies()` |
-| `headers()` | `const h = await headers()` |
-| `draftMode()` | `const draft = await draftMode()` |
+| `cookies()`    | `const jar = await cookies()`      |
+| `headers()`    | `const h = await headers()`        |
+| `draftMode()`  | `const draft = await draftMode()`  |
 
 ## Page props
 
@@ -35,10 +35,7 @@ Prefer `PageProps<'/anime/[id]'>` after `bunx next typegen`.
 ## Route Handlers
 
 ```tsx
-export async function GET(
-  _request: Request,
-  { params }: { params: Promise<{ id: string }> },
-) {
+export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 }
 ```
@@ -46,6 +43,6 @@ export async function GET(
 ## ❌ Never
 
 ```tsx
-const id = params.id;           // sync — breaks build
-const q = searchParams.q;       // sync — breaks build
+const id = params.id; // sync — breaks build
+const q = searchParams.q; // sync — breaks build
 ```

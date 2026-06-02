@@ -14,10 +14,10 @@ paths:
 ## Server redirects
 
 ```tsx
-import { redirect, notFound } from 'next/navigation';
+import { redirect, notFound } from "next/navigation";
 
 if (!media) notFound();
-if (!authorized) redirect('/login');
+if (!authorized) redirect("/login");
 ```
 
 ## Metadata
@@ -26,7 +26,7 @@ if (!authorized) redirect('/login');
 
 ```tsx
 export const metadata: Metadata = {
-  title: { default: 'AniTrack', template: '%s | AniTrack' },
+  title: { default: "AniTrack", template: "%s | AniTrack" },
 };
 ```
 
@@ -36,10 +36,10 @@ export const metadata: Metadata = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
   try {
-    const data = await anilist<MediaDetail>(MEDIA_DETAIL_QUERY, { id: Number(id), type: 'ANIME' });
+    const data = await anilist<MediaDetail>(MEDIA_DETAIL_QUERY, { id: Number(id), type: "ANIME" });
     return { title: getDisplayTitle(data.Media.title) };
   } catch {
-    return { title: 'Anime' };
+    return { title: "Anime" };
   }
 }
 ```

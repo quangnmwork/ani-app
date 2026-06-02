@@ -6,10 +6,10 @@ paths:
 
 # Images
 
-| Source | Approach |
-|--------|----------|
+| Source          | Approach                                               |
+| --------------- | ------------------------------------------------------ |
 | Local `/public` | `next/image` with `width`/`height` or `fill` + `sizes` |
-| AniList CDN | `<img>` or add `remotePatterns` then `next/image` |
+| AniList CDN     | `<img>` or add `remotePatterns` then `next/image`      |
 
 ## AniList covers (current pattern)
 

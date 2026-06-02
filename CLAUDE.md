@@ -58,11 +58,11 @@ app/
 
 ## Implementation phases
 
-| Phase | Scope | Status |
-|-------|-------|--------|
-| 1 | Homepage sections, anime detail, search, browse | Template ready |
-| 2 | Search form (client), browse filters, manga detail UI | TODO |
-| 3 | OAuth login, user list, add to list | TODO |
+| Phase | Scope                                                 | Status         |
+| ----- | ----------------------------------------------------- | -------------- |
+| 1     | Homepage sections, anime detail, search, browse       | Template ready |
+| 2     | Search form (client), browse filters, manga detail UI | TODO           |
+| 3     | OAuth login, user list, add to list                   | TODO           |
 
 @AGENTS.md
 @.claude/rules/anilist.md

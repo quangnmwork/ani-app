@@ -28,7 +28,7 @@ export default function SearchPage() {
 
 // ❌ 'use client' on a page that only displays server-fetched data
 // ❌ Pass functions from Server → Client
-<ClientButton onClick={() => {}} />
+<ClientButton onClick={() => {}} />;
 ```
 
 ## Boundaries
